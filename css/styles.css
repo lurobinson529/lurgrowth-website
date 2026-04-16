@@ -2123,7 +2123,7 @@
   display: flex;
   gap: var(--space-lg);
   width: max-content;
-  animation: credibility-scroll 40s linear infinite;
+  animation: credibility-scroll 60s linear infinite;
   align-items: center;
 }
 
