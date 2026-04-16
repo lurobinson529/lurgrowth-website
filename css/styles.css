@@ -3857,9 +3857,43 @@ body {
 }
 
 /* LUR Framework cards on about page: pastel backgrounds */
-.section--cream-dark .service-card:nth-child(1) { background-color: var(--coral-soft); border-top-color: var(--coral) !important; }
-.section--cream-dark .service-card:nth-child(2) { background-color: var(--slate-soft); border-top-color: var(--slate) !important; }
-.section--cream-dark .service-card:nth-child(3) { background-color: var(--teal-soft); border-top-color: var(--teal) !important; }
+/* LUR Framework pillar card backgrounds */
+.section--cream-dark .service-card:nth-child(1),
+.pillar-card--l { background-color: var(--coral-soft); }
+.section--cream-dark .service-card:nth-child(2),
+.pillar-card--u { background-color: var(--white); }
+.section--cream-dark .service-card:nth-child(3),
+.pillar-card--r { background-color: var(--teal-soft); }
+
+/* Numbered pips (01, 02, 03) */
+.pillar-pips {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: var(--space-md);
+}
+
+.pillar-pip {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: rgba(16, 49, 64, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(16, 49, 64, 0.4);
+}
+
+.pillar-pip--active {
+  background-color: var(--navy-dark);
+  color: var(--white);
+}
+
+.pillar-card--l .pillar-pip--active { background-color: var(--coral-dark); }
+.pillar-card--u .pillar-pip--active { background-color: var(--navy); }
+.pillar-card--r .pillar-pip--active { background-color: var(--teal-dark); }
 
 /* --- Services page: pastel accent tags and visual separation --- */
 .section--cream .section__tag,
