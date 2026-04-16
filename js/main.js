@@ -76,11 +76,18 @@
     var navToggle = document.getElementById('navToggle');
     var navLinks = document.getElementById('navLinks');
 
+    var scrollTicking = false;
     function handleNavScroll() {
-      if (window.pageYOffset > 60) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
+      if (!scrollTicking) {
+        requestAnimationFrame(function () {
+          if (window.pageYOffset > 60) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+          scrollTicking = false;
+        });
+        scrollTicking = true;
       }
     }
 

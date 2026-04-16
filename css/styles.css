@@ -409,16 +409,9 @@
    GRAIN TEXTURE OVERLAY
    ======================================== */
 
+/* Grain overlay removed for performance — fixed SVG filters cause scroll jank */
 .grain {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  display: none;
 }
 
 /* ========================================
@@ -3264,26 +3257,15 @@ body {
   color: var(--navy-dark);
 }
 
-/* Thin border frame — sits below nav (z-index 1000) */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 10px;
-  border: 1px solid rgba(16, 49, 64, 0.12);
-  border-radius: 8px;
-  pointer-events: none;
-  z-index: 999;
-}
+/* Border frame removed for scroll performance */
 
 /* --- Light Navigation --- */
 .nav { height: 66px; }
 .nav,
 .nav.scrolled {
-  background-color: rgba(253, 251, 247, 0.88);
+  background-color: rgba(253, 251, 247, 0.95);
   border-bottom: 1px solid rgba(16, 49, 64, 0.08);
   box-shadow: none;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
 }
 
 .nav__inner { max-width: 1120px; }
@@ -3569,6 +3551,25 @@ body::before {
 
 .section {
   padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 2rem);
+}
+
+/* --- Performance: GPU-accelerate animated elements --- */
+.nav,
+.credibility-strip__track,
+.squiggle-arrow,
+.portrait-badge,
+.thrive-card__pulse {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Lazy-render off-screen sections */
+.section,
+.hp-problem,
+.hp-why,
+.hp-framework {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 /* --- Stat Row (Codex-style) --- */
@@ -4033,9 +4034,7 @@ body::before {
 @media (max-width: 968px) {
   .nav__links {
     top: 66px;
-    background-color: rgba(253, 251, 247, 0.98);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background-color: rgba(253, 251, 247, 0.99);
   }
 
   .nav__links a,
