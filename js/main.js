@@ -142,33 +142,7 @@
     var capacityCard = document.querySelector('.capacity-card');
     if (capacityCard) barObserver.observe(capacityCard);
 
-    // ---- Strength Accordion (event delegation) ----
-    var accordion = document.getElementById('strengthAccordion');
-    if (accordion) {
-      accordion.addEventListener('click', function (e) {
-        // Find the closest header button from the click target
-        var btn = e.target.closest('.strength-card__header');
-        if (!btn) return;
-
-        var card = btn.closest('.strength-card');
-        if (!card) return;
-
-        var isActive = card.classList.contains('active');
-
-        // Close all cards
-        accordion.querySelectorAll('.strength-card').forEach(function (c) {
-          c.classList.remove('active');
-          var header = c.querySelector('.strength-card__header');
-          if (header) header.setAttribute('aria-expanded', 'false');
-        });
-
-        // Open clicked card (if it wasn't already open)
-        if (!isActive) {
-          card.classList.add('active');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    }
+    // Accordion is handled by inline onclick="toggleAccordion(this)" in the HTML
 
     // ---- THRIVE Cards: staggered pulse start on scroll ----
     var thriveObserver = new IntersectionObserver(function (entries) {
