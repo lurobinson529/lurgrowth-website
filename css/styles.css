@@ -4467,3 +4467,78 @@ body {
   color: var(--charcoal);
   line-height: 1.75;
 }
+
+/* ============================================================
+   HERO VIDEO (updated styling)
+   ============================================================ */
+
+.hero-video {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(16, 49, 64, 0.12);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero-video {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+/* ============================================================
+   TRUSTED ACROSS THE SECTOR (logo strip)
+   ============================================================ */
+
+.trusted-strip {
+  text-align: center;
+  padding: 2rem 0 3rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  background-color: var(--cream-warm);
+}
+
+.trusted-strip__label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 1.5rem;
+}
+
+.trusted-strip__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.trust-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: grayscale(100%);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.trust-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .trusted-strip__row {
+    gap: 1.5rem;
+  }
+  .trust-logo {
+    height: 28px;
+  }
+}
