@@ -1,30 +1,60 @@
 :root {
   /* Primary Palette */
-  --navy: #1a2744;
-  --navy-light: #243456;
-  --navy-dark: #0f1a2e;
-  --gold: #c9a84c;
-  --gold-light: #dfc373;
-  --gold-dark: #a8882e;
+  --navy: #103140;
+  --navy-light: #1a4255;
+  --navy-dark: #0a2230;
+  --coral: #FD9D7D;
+  --coral-light: #FDBB9F;
+  --coral-dark: #E07A58;
+
+  /* Extended accents (used on homepage sections) */
+  --forest: #103140;
+  --forest-light: #1a4255;
+  --forest-dark: #0a2230;
+  --forest-deep: #071a24;
+  --rose: #FD9D7D;
+  --rose-light: #FDBB9F;
+  --rose-dark: #E07A58;
+  --gold: #D4A843;
+  --gold-light: #E8C76A;
+  --gold-dark: #B8922E;
+  --plum: #C8A4E8;
+  --plum-light: #DCC4F0;
 
   /* Secondary */
-  --sage: #6b8f71;
-  --sage-light: #8fb396;
-  --sage-dark: #4a6e50;
-  --teal: #3a7d8c;
+  --slate: #5B6D79;
+  --slate-light: #7A8B96;
+  --slate-dark: #435561;
+  --teal: #5BB9B0;
+  --teal-light: #7CCFC7;
+  --teal-dark: #449D94;
+  --green: #7DC47C;
+  --green-accent: #7ABFAA;
 
   /* Neutrals */
-  --cream: #faf8f4;
-  --cream-dark: #f0ece4;
-  --warm-gray: #8a8580;
-  --warm-gray-light: #b5b0ab;
+  --cream: #faf8f6;
+  --cream-dark: #f0ede8;
+  --cream-warm: #FDFBF7;
+
+  /* Soft Pastel Tints */
+  --coral-soft: #FCE4DB;
+  --coral-soft-deep: #F9CFBD;
+  --slate-soft: #DDE4E9;
+  --slate-soft-deep: #C4D1D9;
+  --teal-soft: #D5EEEC;
+  --teal-soft-deep: #B4E0DC;
+  --sand-soft: #F5ECD9;
+  --warm-gray: #7a7e82;
+  --warm-gray-light: #a8acb0;
   --charcoal: #2c2c2c;
   --white: #ffffff;
 
   /* Typography */
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-accent: 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-alt: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-accent: 'Lora', Georgia, serif;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -45,8 +75,8 @@
   --nav-height: 80px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(26, 39, 68, 0.06);
-  --shadow-md: 0 4px 20px rgba(26, 39, 68, 0.1);
-  --shadow-lg: 0 8px 40px rgba(26, 39, 68, 0.14);
-  --shadow-lift: 0 12px 48px rgba(26, 39, 68, 0.18);
+  --shadow-sm: 0 2px 8px rgba(16, 49, 64, 0.06);
+  --shadow-md: 0 4px 20px rgba(16, 49, 64, 0.1);
+  --shadow-lg: 0 8px 40px rgba(16, 49, 64, 0.14);
+  --shadow-lift: 0 12px 48px rgba(16, 49, 64, 0.18);
 }

@@ -50,6 +50,6 @@ button {
 }
 
 ::selection {
-  background-color: var(--gold);
+  background-color: var(--coral);
   color: var(--navy-dark);
 }

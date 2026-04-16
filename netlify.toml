@@ -1,10 +1,11 @@
 [build]
   publish = "."
 
+# Custom 404
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 404
 
 [[headers]]
   for = "/*"

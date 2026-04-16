@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Through the Storm™ | LUR Growth</title>
+  <meta name="description" content="A five-module CPD-accredited course for nonprofit leaders navigating burnout, depletion, and leadership fatigue. Lead Through the Storm is the inner foundation course that helps leaders recognize their storm, reclaim their energy, reconnect with purpose, and build systems that sustain their calm long term.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #103140;
+      --teal: #5BB9B0;
+      --coral: #FD9D7D;
+      --green: #7DC47C;
+      --slate: #5B6D79;
+      --offwhite: #F8F7F4;
+      --white: #FFFFFF;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--offwhite);
+      color: var(--navy);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Navigation */
+    .nav {
+      background: var(--navy);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      color: var(--white);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-logo span {
+      color: var(--teal);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-link {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--coral);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a4a5e 40%, #103140 100%);
+      color: var(--white);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(253, 157, 125, 0.07) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -35%;
+      right: -10%;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(91, 185, 176, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cpd-badge {
+      display: inline-block;
+      background: var(--coral);
+      color: var(--navy);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.4rem 1.2rem;
+      border-radius: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+      font-weight: 400;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-instructor {
+      font-size: 0.95rem;
+      color: var(--coral);
+      font-weight: 500;
+    }
+
+    /* Details Bar */
+    .details-bar {
+      background: var(--white);
+      border-bottom: 1px solid rgba(16, 49, 64, 0.08);
+      padding: 2rem;
+      box-shadow: 0 2px 20px rgba(16, 49, 64, 0.06);
+    }
+
+    .details-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .detail-item {
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .detail-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 0.75rem;
+      background: rgba(253, 157, 125, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .detail-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--coral);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .detail-label {
+      font-size: 0.75rem;
+      color: var(--slate);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    .detail-value {
+      font-size: 0.9rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    /* Sections */
+    .section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--navy);
+    }
+
+    .section-divider {
+      width: 50px;
+      height: 3px;
+      background: var(--coral);
+      margin-bottom: 2rem;
+      border-radius: 2px;
+    }
+
+    /* About */
+    .about p {
+      font-size: 1rem;
+      color: var(--slate);
+      margin-bottom: 1.25rem;
+      max-width: 760px;
+    }
+
+    /* Learning Outcomes */
+    .outcomes-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .outcomes-list li {
+      padding: 1rem 1rem 1rem 3rem;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--navy);
+      border-bottom: 1px solid rgba(16, 49, 64, 0.06);
+    }
+
+    .outcomes-list li:last-child {
+      border-bottom: none;
+    }
+
+    .outcomes-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1.15rem;
+      width: 24px;
+      height: 24px;
+      background: var(--coral);
+      border-radius: 50%;
+      opacity: 0.15;
+    }
+
+    .outcomes-list li::after {
+      content: '✓';
+      position: absolute;
+      left: 6px;
+      top: 1.15rem;
+      font-size: 0.8rem;
+      color: var(--coral);
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    /* Modules */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .module-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.75rem;
+      border: 1px solid rgba(16, 49, 64, 0.06);
+      transition: box-shadow 0.3s, transform 0.2s;
+    }
+
+    .module-card:hover {
+      box-shadow: 0 8px 30px rgba(16, 49, 64, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .module-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .module-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* Who This Is For */
+    .audience-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .audience-list li {
+      padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+      background: var(--white);
+      border-radius: 10px;
+      border-left: 3px solid var(--teal);
+      font-size: 0.95rem;
+      color: var(--navy);
+    }
+
+    /* CPD Section */
+    .cpd-section {
+      background: var(--white);
+      padding: 4rem 2rem;
+      border-top: 1px solid rgba(16, 49, 64, 0.06);
+    }
+
+    .cpd-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .cpd-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .cpd-text p {
+      font-size: 0.95rem;
+      color: var(--slate);
+      line-height: 1.8;
+    }
+
+    .cpd-cert-badge {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a4a5e 100%);
+      color: var(--white);
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      min-width: 200px;
+    }
+
+    .cpd-cert-badge .badge-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--coral);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .cpd-cert-badge .badge-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .cpd-cert-badge .badge-sub {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .cpd-cert-badge .badge-line {
+      width: 40px;
+      height: 2px;
+      background: var(--coral);
+      margin: 0.75rem auto;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--coral);
+    }
+
+    .footer p {
+      margin-bottom: 0.35rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+
+      .cpd-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .cpd-cert-badge {
+        justify-self: center;
+      }
+
+      .hero {
+        padding: 3.5rem 1.5rem 3rem;
+      }
+
+      .section {
+        padding: 3rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        padding: 1rem 1.25rem;
+      }
+
+      .nav-logo {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="https://lurgrowth.com" class="nav-logo">
+      LUR Growth <span>The Nonprofit Thrive Architect™</span>
+    </a>
+    <a href="https://lurgrowth.com" class="nav-link">← Back to lurgrowth.com</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="cpd-badge">CPD Accredited</div>
+      <h1>Lead Through the Storm™</h1>
+      <p class="hero-subtitle">A regenerative reset for nonprofit leaders who are ready to lead from fullness, not exhaustion.</p>
+      <p class="hero-instructor">Latoya Urica Robinson, M.S. | The Nonprofit Thrive Architect™</p>
+    </div>
+  </header>
+
+  <!-- Course Details Bar -->
+  <div class="details-bar">
+    <div class="details-grid">
+      <div class="detail-item">
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="detail-label">Format</div>
+        <div class="detail-value">Online self-paced + In-person options</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="detail-label">Duration</div>
+        <div class="detail-value">5 modules + bonus | 3.5 to 4 CPD hours</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+        </div>
+        <div class="detail-label">Certificate</div>
+        <div class="detail-value">CPD Certificate of Completion</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="detail-label">Accreditation</div>
+        <div class="detail-value">CPD Certification Service</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About the Course -->
+  <section class="section about">
+    <h2>About the course</h2>
+    <div class="section-divider"></div>
+    <p>A five-module CPD-accredited course for nonprofit leaders navigating burnout, depletion, and leadership fatigue. Lead Through the Storm™ is the inner foundation course that helps leaders recognize their storm, reclaim their energy, reconnect with purpose, and build systems that sustain their calm long term.</p>
+    <p>This course goes beyond surface-level self-care advice. It provides a structured, regenerative framework that equips leaders with the tools and practices they need to move from survival mode to sustained, purpose-driven leadership.</p>
+  </section>
+
+  <!-- Learning Outcomes -->
+  <section class="section">
+    <h2>What you will build</h2>
+    <div class="section-divider"></div>
+    <ul class="outcomes-list">
+      <li>Nonprofit Storm Scale Self-Assessment</li>
+      <li>Emotional Regulation Practice Plan</li>
+      <li>Energy Alignment Grid</li>
+      <li>90-Day Storm Plan</li>
+      <li>Calm Integration Plan</li>
+      <li>My Purpose Alignment Map</li>
+    </ul>
+  </section>
+
+  <!-- Course Modules -->
+  <section class="section">
+    <h2>Course modules</h2>
+    <div class="section-divider"></div>
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-number">1</div>
+        <h3>Recognizing the Quiet Storm</h3>
+        <p style="font-size: 0.85rem; color: var(--slate);">Identifying burnout, depletion, and the signs leaders often miss</p>
+      </div>
+      <div class="module-card">
+        <div class="module-number">2</div>
+        <h3>Leading Through Turbulence</h3>
+        <p style="font-size: 0.85rem; color: var(--slate);">Emotional regulation and navigating leadership fatigue</p>
+      </div>
+      <div class="module-card">
+        <div class="module-number">3</div>
+        <h3>Reclaiming Time and Energy</h3>
+        <p style="font-size: 0.85rem; color: var(--slate);">Building an energy alignment practice that protects your capacity</p>
+      </div>
+      <div class="module-card">
+        <div class="module-number">4</div>
+        <h3>Reconnecting with Purpose</h3>
+        <p style="font-size: 0.85rem; color: var(--slate);">Rediscovering what drives you beyond obligation and duty</p>
+      </div>
+      <div class="module-card">
+        <div class="module-number">5</div>
+        <h3>Sustaining the Calm</h3>
+        <p style="font-size: 0.85rem; color: var(--slate);">Creating long-term systems that sustain your leadership calm</p>
+      </div>
+      <div class="module-card">
+        <div class="module-number" style="background: var(--teal);">+</div>
+        <h3>Bonus: From Calm to Clarity</h3>
+        <p style="font-size: 0.85rem; color: var(--slate);">Setting regenerative goals for the next season of leadership</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="section">
+    <h2>Who this course is for</h2>
+    <div class="section-divider"></div>
+    <ul class="audience-list">
+      <li>Executive Directors and nonprofit leaders navigating burnout or chronic exhaustion</li>
+      <li>Senior leaders experiencing depletion and struggling to sustain their energy</li>
+      <li>Nonprofit professionals facing leadership fatigue who want to lead from fullness</li>
+      <li>Leaders ready to build regenerative practices that protect their capacity long term</li>
+    </ul>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section">
+    <h2>What's included</h2>
+    <div class="section-divider"></div>
+    <ul class="audience-list">
+      <li>Guided video lessons across all five modules and bonus module</li>
+      <li>Reflection workbooks to deepen your learning and self-awareness</li>
+      <li>Guided meditation audio for grounding and emotional regulation</li>
+      <li>Regenerative practice exercises to integrate into your daily leadership</li>
+      <li>Certificate of completion upon passing all course requirements</li>
+    </ul>
+  </section>
+
+  <!-- CPD Accreditation -->
+  <section class="cpd-section">
+    <div class="cpd-inner">
+      <div class="cpd-text">
+        <h2>About CPD accreditation</h2>
+        <div class="section-divider"></div>
+        <p>This course has been independently reviewed and accredited by the CPD Certification Service. Participants receive a verifiable CPD Certificate of Completion upon finishing all five modules and the bonus module. CPD accreditation confirms that this course meets rigorous standards for structured, professional learning. lurgrowth.com is the registered CPD provider.</p>
+      </div>
+      <div class="cpd-cert-badge">
+        <div class="badge-label">Independently accredited</div>
+        <div class="badge-line"></div>
+        <div class="badge-title">CPD Certified</div>
+        <div class="badge-sub">Certificate of Completion</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">LUR Growth | Strategic Growth Innovators, LLC</div>
+    <p>© 2025 Strategic Growth Innovators, LLC DBA LUR Growth. All rights reserved.</p>
+    <p><a href="https://lurgrowth.com">lurgrowth.com</a></p>
+  </footer>
+
+</body>
+</html>

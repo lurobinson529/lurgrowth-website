@@ -5,3 +5,6 @@
 .env
 node_modules/
 .netlify/
+settings.local.json
+seedance-loop-prompt.zip
+LUR/
