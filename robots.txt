@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+LLM: https://lurgrowth.com/llms.txt
 Sitemap: https://lurgrowth.com/sitemap.xml
