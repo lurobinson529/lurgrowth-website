@@ -1,6 +1,21 @@
 [build]
   publish = "."
 
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/intensive"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/intensive/"
+  to = "/services.html"
+  status = 301
+
 # Custom 404
 [[redirects]]
   from = "/*"
